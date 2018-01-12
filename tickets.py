@@ -52,7 +52,9 @@ class huoche(object):
 				break
 
 	def start(self):
-		self.driver=Browser(driver_name=self.driver_name,executable_path=self.executable_path)
+		# self.driver=Browser(driver_name=self.driver_name,executable_path=self.executable_path)
+		# 调用默认配置
+		self.driver=Browser("chrome")   
 		self.driver.driver.set_window_size(1400, 1000)
 		self.login()
 		# sleep(1)
